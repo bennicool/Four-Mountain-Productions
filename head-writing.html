@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Head Writing — 4 Mountain Productions</title>
+    <meta name="description" content="Head writing and script development services for film and television." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: { extend: { colors: { brand: { orange: '#f97316' } } } }
+      }
+    </script>
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+  <body class="bg-white text-slate-800 antialiased" id="top">
+    <!-- Banner -->
+    <section class="relative min-h-[45vh] md:min-h-[55vh] flex items-center justify-center">
+      <img src="assets/ScriptWriting-2.jpg" alt="Script writing desk"
+           class="absolute inset-0 h-full w-full object-cover" />
+      <!-- keep overlay behind everything -->
+      <div class="absolute inset-0 bg-black/50 z-0"></div>
+
+      <!-- Logo (top left) -->
+      <a href="index.html#home" class="absolute left-4 top-4 md:left-8 md:top-8 inline-flex items-center z-50"
+         aria-label="Four Mountain Productions home">
+        <img src="assets/4MP Logo_White.png" alt="Four Mountain Productions logo"
+             class="h-[5.0rem] w-auto md:h-[5.9rem]" />
+      </a>
+
+      <!-- Nav (top right) + mobile -->
+      <nav class="absolute right-4 top-4 md:right-8 md:top-8 z-50" aria-label="Main">
+        <!-- Desktop -->
+        <ul class="hidden md:flex items-center gap-8 text-white/90 text-sm md:text-base">
+          <li><a href="index.html#home" class="hover:text-white">HOME</a></li>
+          <li class="relative group" id="aboutGroup">
+            <button id="aboutToggle" type="button"
+              class="inline-flex items-center gap-1 hover:text-white focus:outline-none"
+              aria-haspopup="true" aria-expanded="false" aria-controls="aboutMenu">
+              ABOUT US
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-80" viewBox="0 0 24 24" fill="currentColor"><path d="M6.75 9l5.25 5.25L17.25 9z"/></svg>
+            </button>
+            <ul id="aboutMenu"
+              class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity duration-150 absolute right-0 top-full min-w-[12rem] rounded-xl bg-white text-slate-800 shadow-lg ring-1 ring-slate-900/10 p-2 z-50">
+              <li><a href="what-we-do.html"  class="block rounded-lg px-3 py-2 hover:bg-slate-100">WHAT WE DO</a></li>
+              <li><a href="projects.html"    class="block rounded-lg px-3 py-2 hover:bg-slate-100">PROJECTS</a></li>
+              <li><a href="head-writing.html" class="block rounded-lg px-3 py-2 hover:bg-slate-100">HEAD WRITING</a></li>
+              <li><a href="commercials.html" class="block rounded-lg px-3 py-2 hover:bg-slate-100">CORPORATE</a></li>
+              <li><a href="contact-us.html"   class="block rounded-lg px-3 py-2 hover:bg-slate-100">CONTACT</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Mobile: hamburger -->
+        <button id="mobileToggle"
+          class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-white/90 hover:text-white hover:bg-white/10 focus:outline-none"
+          aria-controls="mobileMenu" aria-expanded="false" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3.75 6.75h16.5v1.5H3.75zM3.75 11.25h16.5v1.5H3.75zM3.75 15.75h16.5v1.5H3.75z"/>
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile panel (fixed + on top) -->
+      <div id="mobileMenu"
+        class="md:hidden fixed right-4 top-[4.5rem] w-full max-w-xs rounded-2xl bg-white text-slate-800 shadow-2xl ring-1 ring-slate-900/10 p-3 invisible opacity-0 transition-opacity z-50">
+        <a href="index.html#home" class="block rounded-lg px-3 py-2 hover:bg-slate-100">HOME</a>
+        <div class="mt-1" id="mobileAbout">
+          <button id="mobileAboutToggle"
+            class="w-full flex items-center justify-between rounded-lg px-3 py-2 hover:bg-slate-100"
+            aria-controls="mobileAboutMenu" aria-expanded="false" type="button">
+            <span>ABOUT US</span>
+            <svg id="mobileChevron" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M5.25 7.5L10 12.25 14.75 7.5H5.25z"/>
+            </svg>
+          </button>
+          <ul id="mobileAboutMenu" class="max-h-0 overflow-hidden transition-[max-height] duration-200 ease-out">
+            <li><a href="what-we-do.html"   class="block rounded-lg px-3 py-2 hover:bg-slate-100">WHAT WE DO</a></li>
+            <li><a href="projects.html"     class="block rounded-lg px-3 py-2 hover:bg-slate-100">PROJECTS</a></li>
+            <li><a href="head-writing.html" class="block rounded-lg px-3 py-2 hover:bg-slate-100">HEAD WRITING</a></li>
+            <li><a href="commercials.html"  class="block rounded-lg px-3 py-2 hover:bg-slate-100">CORPORATE</a></li>
+            <li><a href="contact-us.html"   class="block rounded-lg px-3 py-2 hover:bg-slate-100">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Banner text -->
+      <div class="relative mx-auto max-w-4xl px-4 text-center z-10">
+        <h1 class="text-white uppercase text-4xl md:text-6xl font-extrabold tracking-wide">Head Writing</h1>
+        <p class="mt-4 text-white/90 text-lg md:text-xl italic">Story leadership & script development for film and television.</p>
+      </div>
+    </section>
+
+    <!-- Intro section below banner -->
+    <section class="px-4 py-16">
+      <div class="max-w-5xl mx-auto text-center space-y-8">
+
+        <!-- Intro heading -->
+        <h2 class="text-2xl md:text-3xl font-semibold text-black leading-relaxed">
+          At the heart of Four Mountain Productions is <strong>Caroline Doherty</strong>,
+          a storyteller with a producer’s ear. Her ability to see a producer’s vision
+          and translate it to screen has made her a go-to name across South Africa’s
+          telenovela landscape.
+        </h2>
+
+        <!-- Shows intro heading -->
+        <h2 class="text-2xl md:text-3xl font-semibold text-black leading-relaxed">
+          Below are some of the shows Four Mountain Productions have been contracted to:
+        </h2>
+
+        <!-- Ring of Lies -->
+        <div class="mt-8 space-y-4">
+          <h3 class="text-xl font-bold text-black">RING OF LIES - MZANSI MAGIC</h3>
+          <img src="assets/RingOfLies.jpg" alt="Ring of Lies" class="mx-auto rounded-lg shadow-md max-w-full h-auto" />
+          <p class="text-lg text-slate-800">Seasons: 2</p>
+          <p class="text-lg text-slate-800">Awards: Winner – Best Writing Team – Soapy Awards (2018)</p>
+        </div>
+
+        <!-- Imbewu: The Seed -->
+        <div class="mt-10 space-y-4">
+          <h3 class="text-xl font-bold text-black">IMBEWU: THE SEED - ETV</h3>
+          <img src="assets/Imbewu_2.jpg" alt="Imbewu: The Seed" class="mx-auto rounded-lg shadow-md max-w-full h-auto" />
+          <p class="text-lg text-slate-800">Seasons: 1, 2, 3</p>
+          <p class="text-lg text-slate-800">Awards: Fastest growing show on eTV (2019)</p>
+        </div>
+
+        <!-- 1802: Love Defies Time -->
+        <div class="mt-10 space-y-4">
+          <h3 class="text-xl font-bold text-black">1802: LOVE DEFIES TIME - MZANSI MAGIC</h3>
+          <img src="assets/1802_love_defies_time_2023.jpg" alt="1802: Love Defies Time" class="mx-auto rounded-lg shadow-md max-w-full h-auto" />
+          <p class="text-lg text-slate-800">Seasons: 1</p>
+        </div>
+
+        <!-- Blood Legacy -->
+        <div class="mt-10 space-y-4">
+          <h3 class="text-xl font-bold text-black">BLOOD LEGACY - NETFLIX</h3>
+          <img src="assets/BloodLegacy_2.jpg" alt="Blood Legacy" class="mx-auto rounded-lg shadow-md max-w-full h-auto" />
+          <p class="text-lg text-slate-800">Seasons: 1</p>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="border-t border-slate-200">
+      <div class="mx-auto max-w-6xl px-4 py-10 text-sm text-slate-600">
+        © <span id="year"></span> Four Mountain Productions. All rights reserved.
+      </div>
+    </footer>
+
+    <script>
+      // Desktop ABOUT dropdown (click + hover)
+      const aboutGroup = document.getElementById('aboutGroup');
+      const aboutBtn   = document.getElementById('aboutToggle');
+      const aboutMenu  = document.getElementById('aboutMenu');
+
+      function openMenu(){ aboutMenu.classList.remove('invisible','opacity-0'); aboutMenu.classList.add('visible','opacity-100'); aboutBtn?.setAttribute('aria-expanded','true'); }
+      function closeMenu(){ aboutMenu.classList.add('invisible','opacity-0'); aboutMenu.classList.remove('visible','opacity-100'); aboutBtn?.setAttribute('aria-expanded','false'); }
+      function isOpen(){ return aboutMenu.classList.contains('visible'); }
+
+      aboutBtn?.addEventListener('click',(e)=>{ e.stopPropagation(); isOpen()?closeMenu():openMenu(); });
+      document.addEventListener('click',(e)=>{ if(!aboutGroup?.contains(e.target)) closeMenu(); });
+      document.addEventListener('keydown',(e)=>{ if(e.key==='Escape') closeMenu(); });
+
+      // Mobile hamburger + ABOUT collapsible
+      const mobileToggle      = document.getElementById('mobileToggle');
+      const mobileMenu        = document.getElementById('mobileMenu');
+      const mobileAboutToggle = document.getElementById('mobileAboutToggle');
+      const mobileAboutMenu   = document.getElementById('mobileAboutMenu');
+      const mobileChevron     = document.getElementById('mobileChevron');
+
+      function openMobile(){ mobileMenu.classList.remove('invisible','opacity-0'); mobileMenu.classList.add('visible','opacity-100'); mobileToggle?.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+      function closeMobile(){ mobileMenu.classList.add('invisible','opacity-0'); mobileMenu.classList.remove('visible','opacity-100'); mobileToggle?.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+      function isMobileOpen(){ return mobileMenu.classList.contains('visible'); }
+
+      mobileToggle?.addEventListener('click',(e)=>{ e.stopPropagation(); isMobileOpen()?closeMobile():openMobile(); });
+      mobileAboutToggle?.addEventListener('click',(e)=>{
+        e.stopPropagation();
+        const ex = mobileAboutToggle.getAttribute('aria-expanded')==='true';
+        mobileAboutToggle.setAttribute('aria-expanded',String(!ex));
+        mobileAboutMenu.style.maxHeight = ex ? '0px' : mobileAboutMenu.scrollHeight+'px';
+        mobileChevron.style.transform = ex ? 'rotate(0deg)' : 'rotate(180deg)';
+      });
+      document.addEventListener('click',(e)=>{ if(!mobileMenu.contains(e.target) && e.target!==mobileToggle) closeMobile(); });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
